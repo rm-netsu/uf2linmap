@@ -1,0 +1,5 @@
+export const UF2_BLOCK_SIZE = 512
+export const UF2_HEADER_SIZE = 32
+
+export const UF2_FLASH_ADDR_FIELD_OFFSET = 12
+export const UF2_BLOCK_PAYLOAD_FIELD_OFFSET = 16
