@@ -1,7 +1,7 @@
 {
 	"name": "@rm-netsu/uf2linmap",
 	"version": "1.0.0",
-	"description": "Provides utilities to read the linear address space payload from UF2 files and write a new payload back into them.",
+	"description": "Library for extracting and writing the payload data within UF2 firmware files.",
 	"type": "module",
 	"files": [
 		"dist"
