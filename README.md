@@ -6,7 +6,7 @@ UF2 (USB Flashing Format) files contain firmware data split into fixed-size bloc
 
 ## Features
 
-* Extract the combined payload data from a UF2 file as a single `Uint8Array`.
+* Extract the combined payload data from a UF2 file as a single `Buffer`.
 * Write a modified payload `Buffer` back into an existing UF2 buffer, replacing the original data while preserving the UF2 block structure.
 * Includes basic validation for overlapping blocks.
 
@@ -20,7 +20,7 @@ npm install @rm-netsu/uf2linmap
 
 ### Reading the linear payload
 
-Use the `readLinearPayload` function to extract all payload data from a UF2 buffer and combine it into a single `Uint8Array`, ordered by the flash addresses specified in the UF2 blocks.
+Use the `readLinearPayload` function to extract all payload data from a UF2 buffer and combine it into a single `Buffer`, ordered by the flash addresses specified in the UF2 blocks.
 
 ```typescript
 import { readFile } from 'fs/promises'; // Required for reading the file
@@ -37,7 +37,7 @@ try {
     const payload: Uint8Array = readLinearPayload(uf2Buffer);
 
     console.log(`Successfully read payload of size ${payload.length} bytes.`);
-    // You can now work with the 'payload' Uint8Array
+    // You can now work with the 'payload' Buffer
     // ...
 
 } catch (error) {
