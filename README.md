@@ -34,7 +34,7 @@ try {
     const uf2Buffer = await readFile(uf2FilePath);
 
     // Extract the combined linear payload
-    const payload: Uint8Array = readLinearPayload(uf2Buffer);
+    const payload: Buffer = readLinearPayload(uf2Buffer);
 
     console.log(`Successfully read payload of size ${payload.length} bytes.`);
     // You can now work with the 'payload' Buffer
@@ -64,7 +64,7 @@ try {
     const uf2Buffer = await readFile(uf2FilePath);
 
     // 2. (Optional) Read the current payload if you need to modify it
-    const originalPayload: Uint8Array = readLinearPayload(uf2Buffer);
+    const originalPayload: Buffer = readLinearPayload(uf2Buffer);
 
     // 3. Create or obtain your modified payload
     // Ensure the size of modifiedPayload matches originalPayload.length
